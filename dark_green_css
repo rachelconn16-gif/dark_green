@@ -1,129 +1,83 @@
-/* --------------------------------------------------
-   GLOBAL
--------------------------------------------------- */
+/* --- Dark-Forest + Green Theme CSS --- */
 
+/* Set background to dark forest image */
 body {
-    font-family: 'Metamorphous', serif !important;
-    background: url("https://tse4.mm.bing.net/th/id/OIP.Zqc5jeulgfyNFpB19zl2xAHaEo?rs=1&pid=ImgDetMain&o=7&rm=3") 
-                no-repeat center center fixed !important;
-    background-size: cover !important;
-    color: #d7e5d0 !important;
-    margin: 0;
-    padding: 0;
+  background: url('https://tse4.mm.bing.net/th/id/OIP.yNmpcRaiz-xI7wowpCYQowHaEo?rs=1&pid=ImgDetMain&o=7&rm=3') no-repeat center center fixed;
+  background-size: cover;
+  color: #e0f2e9; /* light green-ish text for readability */
+  /* optionally add overlay for contrast: */
+  background-color: #001a0d; /* deep dark green/forest base */
+  background-blend-mode: overlay;
 }
 
-#main {
-    background: transparent !important;
+/* General link / accent colors: various greens */
+a, .accent, .button {
+  color: #6dbc5a;  /* medium green */
 }
 
-.container,
-.content {
-    background: transparent !important;
+a:hover, .button:hover {
+  color: #8fe68f;  /* lighter green on hover */
 }
 
-.sidebar,
-#sidebar,
-#content,
-#wrapper {
-    background: transparent !important;
-    box-shadow: none !important;
+/* Example: headers */
+h1, h2, h3, h4, h5, h6 {
+  color: #a8e0b0;
 }
 
-/* --------------------------------------------------
-   NAVIGATION BAR
--------------------------------------------------- */
-
-#header,
-.navbar,
-.topbar {
-    background-color: rgba(25, 55, 25, 0.85) !important;
-    color: #e6f5e6 !important;
-    border-bottom: 2px solid #2c5c2c !important;
+/* Wolf icon — make circular */
+/* Assuming icon has class .wolf-icon or similar — change as needed */
+.wolf-icon {
+  width: 64px;       /* or whatever size is used */
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  background-size: cover;
+  background-position: center center;
 }
 
-.navbar a,
-.topbar a {
-    color: #e6f5e6 !important;
+/* If using <img> for the wolf icon: */
+.wolf-icon img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  display: block;
 }
 
-.navbar a:hover,
-.topbar a:hover {
-    color: #b4e3b4 !important;
+/* Optional: cards, containers, panels etc — give dark-greenish background with opacity */
+.card, .panel, .container {
+  background-color: rgba(0, 32, 16, 0.75); /* translucent deep green/black */
+  border: 1px solid #265b3a; /* darker green border */
+  color: #d8f3dc;
 }
 
-/* --------------------------------------------------
-   MAIN CHAT BOX
--------------------------------------------------- */
-
-#chatContainer,
-#chat,
-.chatMessageContainer,
-.chatMessage {
-    background-color: rgba(30, 70, 30, 0.75) !important;
-    color: #eaf9ea !important;
-    border-radius: 6px !important;
+/* Buttons / UI controls */
+.button, button, input[type="button"], input[type="submit"] {
+  background-color: #265b3a;
+  color: #e0f2e9;
+  border: 1px solid #4f8b5a;
 }
 
-#chatMessageInput,
-#chatInput,
-#chatMessageField {
-    background-color: rgba(20, 50, 20, 0.75) !important;
-    color: #e6f5e6 !important;
+.button:hover, button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+  background-color: #4f8b5a;
+  color: #ffffff;
 }
 
-/* --------------------------------------------------
-   WOLF ICONS (circle crop + glow on hover)
--------------------------------------------------- */
-
-img.avatar,
-img.wolfavatar,
-img[src*="wolfsquare"],
-img[src*="dynasty"],
-img[src*="den"] {
-    border-radius: 50% !important;
-    object-fit: cover !important;
-    width: 70px !important;
-    height: 70px !important;
-    transition: box-shadow 0.3s ease, transform 0.3s ease !important;
+/* Example: navigation bar */
+.navbar {
+  background-color: rgba(0, 25, 12, 0.85);
+  border-bottom: 1px solid #3b6e4f;
 }
 
-img.avatar:hover,
-img.wolfavatar:hover,
-img[src*="wolfsquare"]:hover,
-img[src*="dynasty"]:hover,
-img[src*="den"]:hover {
-    box-shadow: 0 0 12px 6px rgba(80, 150, 80, 0.85) !important;
-    transform: scale(1.05);
+/* Example: footer */
+.footer {
+  background-color: rgba(0, 25, 12, 0.85);
+  border-top: 1px solid #3b6e4f;
+  color: #a8e0b0;
 }
 
-/* --------------------------------------------------
-   PANELS + BOXES
--------------------------------------------------- */
-
-.box,
-.feature,
-.article,
-.table,
-.table-row {
-    background: rgba(0,0,0,0.35) !important;
-    border: 1px solid rgba(50,100,50,0.6) !important;
-    border-radius: 10px !important;
-}
-
-h1, h2, h3, h4 {
-    color: #d0f0d0 !important;
-    text-shadow: 0 0 5px #0f2c0f;
-}
-
-.tooltip {
-    background: rgba(30,60,30,0.9) !important;
-    color: #e6f5e6 !important;
-}
-
-a {
-    color: #9fd89f !important;
-}
-
-a:hover {
-    color: #c5f5c5 !important;
+/* Remove “made by” section — if there was a footer or signature, hide it */
+/* Example: if there was an element with class .signature or #made-by — hide it: */
+.signature, #made-by, .footer .credit {
+  display: none !important;
 }
